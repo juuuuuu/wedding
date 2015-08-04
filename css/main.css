@@ -6,7 +6,8 @@ img.header {
 }
 
 .navbar-default {
-    background-color: #e3e3e6;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .navbar .navbar-collapse {
@@ -23,24 +24,48 @@ img.header {
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #e4e3e7;
-    background-color: #81b5fb;
+    background-color: #768aa7;
 }
 
 .nav li a {
     font-size: 35px;
     margin: 0 5px;
-}
-
-.wedding-font, section h1 {
     font-family: 'Great Vibes', cursive;
 }
 
+.nav li img {
+    padding-top: 10px;
+}
+
 .wedding-light {
-    color: #81b5fb;
+    color: #768aa7;
 }
 
 section h1 {
+    font-family: 'Great Vibes', cursive;
     font-size: 50px;
+    margin-bottom: 20px;
+    color: #777;
 }
 
+section h2 {
+    font-family: 'Great Vibes', cursive;
+    border-bottom: 2px solid #768aa7;
+    display: inline-block;
+}
+
+section h3 {
+    font-family: 'Great Vibes', cursive;
+}
+
+section h4 {
+}
+
+section .image-separator {
+    margin-bottom: 30px;
+}
+ section img {
+    max-width: 100%;
+    height: auto;
+ }
 
