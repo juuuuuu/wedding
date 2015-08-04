@@ -50,12 +50,12 @@ section h1 {
 
 section h2 {
     font-family: 'Great Vibes', cursive;
-    border-bottom: 2px solid #768aa7;
-    display: inline-block;
 }
 
 section h3 {
     font-family: 'Great Vibes', cursive;
+    border-bottom: 2px solid #768aa7;
+    display: inline-block;
 }
 
 section h4 {
