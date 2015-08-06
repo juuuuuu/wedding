@@ -16,7 +16,8 @@
     "gulp-concat": "*",
     "gulp-uglify": "*",
     "gulp-csso": "*",
-    "gulp-sourcemaps": "*",
+    "gulp-rename": "*",
+    "gulp-notify": "*",
     "del": "*"
   }
 }
