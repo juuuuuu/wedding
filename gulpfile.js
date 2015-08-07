@@ -8,7 +8,7 @@ var notify = require('gulp-notify');
 var del    = require('del');
 
 var paths = {
-  scripts: ['src/js/lib/*.js', 'src/js/*.js'],
+  scripts: 'src/js/*.js',
   styles: 'src/stylus/*.styl'
 };
 
@@ -21,10 +21,9 @@ gulp.task('clean', function(cb) {
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist/js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist'))
         // .pipe(notify({ message: 'Scripts task complete' }))
     ;
 });
@@ -32,12 +31,10 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
     return  gulp.src(paths.styles)
         .pipe(stylus())
-        .pipe(gulp.dest('dist/css'))
         .pipe(concat('all.css'))
-        .pipe(gulp.dest('dist/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(csso())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist'))
     ;
 });
 
