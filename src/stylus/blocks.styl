@@ -1,0 +1,10 @@
+blockShadowed(args...)
+    -moz-box-shadow args
+    -webkit-box-shadow args
+    -o-box-shadow args
+    box-shadow args
+
+.block-shadowed
+    blockShadowed(0px 0px 15px 5px #cfcfcf)
+    margin 20px 10px
+    padding 10px

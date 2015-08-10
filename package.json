@@ -1,7 +1,7 @@
 {
   "name": "gulp",
   "version": "3.9.0",
-  "description": "Gulp Demo",
+  "description": "Gulp",
   "main": "index.js",
   "directories": {
     "doc": "doc"
@@ -17,7 +17,6 @@
     "gulp-uglify": "*",
     "gulp-csso": "*",
     "gulp-rename": "*",
-    "gulp-notify": "*",
     "del": "*"
   }
 }

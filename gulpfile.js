@@ -4,7 +4,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var csso   = require('gulp-csso');
 var rename = require('gulp-rename');
-var notify = require('gulp-notify');
 var del    = require('del');
 
 var paths = {
@@ -13,18 +12,15 @@ var paths = {
 };
 
 gulp.task('clean', function(cb) {
-  // You can use multiple globbing patterns as you would with `gulp.src`
-  del(['build'], cb);
+    del(['dist'], cb)
 });
 
-// Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         .pipe(concat('all.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('dist'))
-        // .pipe(notify({ message: 'Scripts task complete' }))
     ;
 });
 
@@ -38,11 +34,12 @@ gulp.task('styles', function() {
     ;
 });
 
-// Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.scripts, ['compress_scripts', 'concat_scripts']);
+  gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.styles, ['styles']);
 });
 
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'scripts', 'styles']);
+gulp.task('default', ['clean', 'watch'], function() {
+  gulp.start('scripts', 'styles');
+});
+
