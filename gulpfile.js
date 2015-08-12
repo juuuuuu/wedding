@@ -9,7 +9,7 @@ var del    = require('del');
 var paths = {
   scripts: 'src/js/*.js',
   styles: 'src/stylus/*.styl',
-  images: 'src/images/*',
+  images: 'src/images/**',
 };
 
 gulp.task('clean', function(cb) {
